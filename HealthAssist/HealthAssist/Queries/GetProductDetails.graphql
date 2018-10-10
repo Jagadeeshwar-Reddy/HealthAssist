@@ -1,0 +1,21 @@
+query GetProduct($business: String, $storeid: ID, $productId: String) {
+product(tpnc: $productId, storeid: $storeid) {
+title
+details {
+nutritionInfo: nutrition {
+name
+perComp: value1
+perServing: value2
+referenceIntake: value3
+referencePercentage: value4
+}
+gda {
+name
+value
+percent
+rating
+}
+}
+}
+}
+

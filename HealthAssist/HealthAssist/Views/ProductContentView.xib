@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ProductContentView" customModule="HealthAssist" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGE-DC-uHX">
+                    <rect key="frame" x="121" y="10" width="210" height="20.5"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KNn-12-LRD">
+                    <rect key="frame" x="8" y="8" width="102" height="104"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="102" id="896-BO-NXu"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgX-5e-w7k">
+                    <rect key="frame" x="289" y="79" width="70" height="33"/>
+                    <color key="backgroundColor" red="0.0" green="0.32549019607843138" blue="0.62352941176470589" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="zyx-vU-hAM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <state key="normal" title="Add">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcc-sr-Vns" customClass="TriLabelView" customModule="TriLabelView">
+                    <rect key="frame" x="335" y="0.0" width="40" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="JVw-aG-7Zr"/>
+                        <constraint firstAttribute="width" constant="40" id="PCj-SA-jfh"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="positionName" value="topright"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="lengthPercentage">
+                            <real key="value" value="90"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="bGE-DC-uHX" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="9Uw-xb-Eeq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hgX-5e-w7k" secondAttribute="trailing" constant="16" id="E6J-NA-no5"/>
+                <constraint firstItem="KNn-12-LRD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="Fi2-fC-lu0"/>
+                <constraint firstItem="gcc-sr-Vns" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Zv2-M3-pkb"/>
+                <constraint firstItem="gcc-sr-Vns" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="hjb-8y-vJz"/>
+                <constraint firstItem="bGE-DC-uHX" firstAttribute="leading" secondItem="KNn-12-LRD" secondAttribute="trailing" constant="11" id="kQ3-Qt-hwy"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="KNn-12-LRD" secondAttribute="bottom" constant="8" id="nKs-e0-QJd"/>
+                <constraint firstItem="KNn-12-LRD" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="pLS-Um-BKw"/>
+                <constraint firstItem="gcc-sr-Vns" firstAttribute="leading" secondItem="bGE-DC-uHX" secondAttribute="trailing" constant="4" id="wnw-LN-CUf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hgX-5e-w7k" secondAttribute="bottom" constant="8" id="z53-B6-vp1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="addButton" destination="hgX-5e-w7k" id="5Mp-hl-AOH"/>
+                <outlet property="colorCodeView" destination="gcc-sr-Vns" id="2kG-gp-DQl"/>
+                <outlet property="imageview" destination="KNn-12-LRD" id="8pE-iX-YAm"/>
+                <outlet property="titleLabel" destination="bGE-DC-uHX" id="3TP-m5-mhC"/>
+            </connections>
+            <point key="canvasLocation" x="-259.5" y="-123"/>
+        </view>
+    </objects>
+</document>

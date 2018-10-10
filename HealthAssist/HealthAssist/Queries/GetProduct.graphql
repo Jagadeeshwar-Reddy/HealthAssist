@@ -1,0 +1,12 @@
+query GetProduct($barcode: ID) {
+  product(barcode: $barcode) {
+   ...ProductItem
+  }
+}
+
+fragment ProductItem on ProductInterface {
+  id
+  baseProductId
+  title
+  defaultImageUrl
+}

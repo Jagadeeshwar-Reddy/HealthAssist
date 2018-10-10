@@ -1,0 +1,20 @@
+query SearchProduct(
+  $query: String!,
+  $page: Int, $count: Int, $storeId: ID, $business: String,
+  $includeProductList: Boolean = true,
+) {
+  search(
+    query: $query, page: $page, count: $count, storeid: $storeId, business: $business
+  ) {
+    productItems: products @include(if: $includeProductList) {
+      ...ProductItem
+    }
+  }
+}
+
+fragment ProductItem on ProductInterface {
+  id
+  baseProductId
+  title
+  defaultImageUrl
+}

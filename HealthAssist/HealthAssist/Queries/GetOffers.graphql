@@ -1,0 +1,14 @@
+query GetProductsForPromotionType($promotionType: String!, $page: Int, $count: Int) {
+  promotionType(type: $promotionType, page: $page, count: $count) {    
+    productItems: products {
+      ...ProductItem
+    }    
+  }
+}
+
+fragment ProductItem on ProductInterface {
+  id
+  baseProductId
+  title
+  defaultImageUrl
+}

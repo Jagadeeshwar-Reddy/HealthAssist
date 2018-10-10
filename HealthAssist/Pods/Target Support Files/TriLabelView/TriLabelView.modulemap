@@ -1,0 +1,6 @@
+framework module TriLabelView {
+  umbrella header "TriLabelView-umbrella.h"
+
+  export *
+  module * { export * }
+}
